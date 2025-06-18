@@ -1,0 +1,30 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a11cb;" />
+      <stop offset="100%" style="stop-color:#2575fc;" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Stylized Open Book / VS -->
+  <g style="filter:url(#glow)">
+    <!-- Left page / 'V' -->
+    <path d="M50 15 L15 25 C 25 50, 25 70, 15 85 L50 95 Z" fill="url(#logoGradient)" />
+    
+    <!-- Right page / 'S' -->
+    <path d="M50 15 L85 25 C 75 50, 75 70, 85 85 L50 95 Z" fill="url(#logoGradient)" />
+
+    <!-- Center binding -->
+    <rect x="48" y="15" width="4" height="80" fill="#ffffff" fill-opacity="0.8"/>
+    
+    <!-- Unique Spark Element -->
+    <path d="M50 45 L52 49 L56 50 L52 51 L50 55 L48 51 L44 50 L48 49 Z" fill="#f1c40f"/>
+  </g>
+</svg>
