@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd frontend && npm install && npm run build"
+    "build": "bash build.sh",
+    "start": "cd frontend && npm run preview",
+    "vercel-build": "npm run build"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "18.x",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@vercel/node": "^2.15.0"
+  },
+  "devDependencies": {
+    "vercel": "^28.4.7"
   }
 }
