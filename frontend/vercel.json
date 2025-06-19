@@ -1,21 +1,17 @@
 {
   "version": 2,
-  "framework": "vite",
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist",
-        "zeroConfig": true
+        "installCommand": "npm install --unsafe-perm",
+        "buildCommand": "npm run build"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "https://your-backend-url.vercel.app/api/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
