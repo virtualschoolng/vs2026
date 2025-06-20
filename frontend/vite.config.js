@@ -10,11 +10,17 @@ export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production';
   
   return {
-    base: isProduction ? '/' : '/',
+    base: isProduction ? './' : '/',
     plugins: [react()],
     define: {
       'process.env': env,
       'import.meta.env.MODE': JSON.stringify(mode),
+    },
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      sourcemap: true,
+      emptyOutDir: true,
     },
     server: {
       port: 3000,
