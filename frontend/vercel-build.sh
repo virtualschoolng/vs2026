@@ -10,7 +10,7 @@ chmod -R 777 .
 
 # Install dependencies
 echo "--- Installing dependencies ---"
-npm install --legacy-peer-deps --unsafe-perm
+npm install --legacy-peer-deps
 
 # Build application
 echo "--- Building application ---"
