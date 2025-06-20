@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "cd frontend && chmod +x vercel-build.sh && ./vercel-build.sh",
-    "start": "cd frontend && npm run preview"
+    "start": "cd frontend && npm run preview",
+    "vercel-build": "cd frontend && chmod +x vercel-build.sh && ./vercel-build.sh"
   },
   "engines": {
     "node": "18.x",

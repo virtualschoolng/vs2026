@@ -3,10 +3,12 @@
 # Exit on error
 set -e
 
-echo "--- Setting up environment ---"
+# Enable debug logging
+set -x
 
-# Fix permissions
-chmod -R 777 .
+echo "--- Setting up environment ---"
+pwd
+ls -la
 
 # Install dependencies
 echo "--- Installing dependencies ---"
@@ -15,5 +17,9 @@ npm install --legacy-peer-deps
 # Build application
 echo "--- Building application ---"
 npm run build
+
+# Verify build output
+echo "--- Verifying build output ---"
+ls -la dist/
 
 echo "--- Build completed successfully ---"
