@@ -7,14 +7,24 @@
       "config": {
         "distDir": "dist",
         "installCommand": "cd frontend && npm install",
-        "buildCommand": "cd frontend && npm run build"
+        "buildCommand": "cd frontend && npm run build",
+        "outputDirectory": "dist"
       }
     }
   ],
   "routes": [
     {
+      "src": "/_next/static/(.*)",
+      "dest": "/_next/static/$1"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/assets/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" }
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "dest": "/assets/$1"
     },
     {
       "src": "/favicon.ico",
@@ -26,7 +36,12 @@
     },
     {
       "src": "/(.*)",
+      "status": 200,
+      "headers": { "cache-control": "no-cache" },
       "dest": "/index.html"
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
