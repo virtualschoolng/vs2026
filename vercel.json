@@ -2,14 +2,28 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/vercel-build.sh",
+      "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "installCommand": "cd frontend && npm install",
+        "buildCommand": "cd frontend && npm run build"
       }
     }
   ],
   "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" }
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/logo.svg",
+      "dest": "/logo.svg"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
