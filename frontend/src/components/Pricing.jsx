@@ -91,7 +91,7 @@ const Pricing = () => {
   const plans = {
     monthly: {
       name: 'Virtual School of Nigeria Access – Monthly',
-      price: 15000,
+      price: 15750, // 5% increase from 15000
       description: 'Full access to all classes (Nursery to SS3), AI and ICT courses, life & leadership skills, assignments, support and weekly content updates. Cancel anytime.',
       features: [
         'Full access to all classes (Nursery to SS3)',
