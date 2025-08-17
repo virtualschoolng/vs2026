@@ -35,7 +35,7 @@ function CourseCarousel() {
             alt={course.title}
             style={{ height: '500px', objectFit: 'cover' }}
           />
-          <Carousel.Caption className="p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius: '10px', textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
+          <Carousel.Caption className="p-3" style={{ backgroundColor: 'var(--color-overlay-dark)', borderRadius: 'var(--rounded-card)', textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}>
             <h3 className="h4">{course.title}</h3>
             <p className="d-none d-md-block">{course.description}</p>
           </Carousel.Caption>

@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#1DBF73',        // Emerald Green
-        'primary-hover': '#159D5B',  // Darker Green
-        'secondary': '#0F1E3C',      // Deep Navy Blue
-        'accent': '#00B4F0',        // Sky Blue
-        'accent-hover': '#009AD1',  // Darker Sky Blue
-        'background': '#F8F9FB',    // Light Gray / Off-White
+        'primary': '#008751',        // Nigerian Green
+        'primary-hover': '#006B3E',  // Darker Nigerian Green
+        'secondary': '#FCD116',      // Nigerian Yellow
+        'accent': '#E03C31',        // Nigerian Red
+        'accent-hover': '#B82F28',  // Darker Nigerian Red
+        'background': '#F5F5F5',    // Light Neutral
         'surface': '#FFFFFF',       // For cards
         'text': '#222222',          // Charcoal
         'text-light': '#555555',   // Lighter Gray for secondary text
@@ -22,7 +22,7 @@ export default {
       },
       fontFamily: {
         headline: ['Poppins', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
       },
       borderRadius: {
         'button': '8px',

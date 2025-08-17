@@ -62,22 +62,22 @@ const testimonials = [
 ];
 
 const PricingCard = ({ plan }) => (
-  <div className={`bg-white rounded-xl shadow-lg p-8 flex flex-col ${plan.popular ? 'border-4 border-primary' : 'border border-gray-200'}`}>
+  <div className={`bg-surface rounded-card shadow-card p-8 flex flex-col ${plan.popular ? 'border-4 border-accent' : 'border border-border'}`}>
     {plan.popular && (
-      <div className="bg-primary text-white text-xs font-bold rounded-full px-4 py-1 self-center mb-4 -mt-12">MOST POPULAR</div>
+      <div className="bg-accent text-white text-xs font-bold rounded-full px-4 py-1 self-center mb-4 -mt-12">MOST POPULAR</div>
     )}
-    <h3 className="text-2xl font-bold text-secondary text-center font-headline">{plan.name}</h3>
-    <p className="text-4xl font-bold text-center my-4">{plan.price} <span className="text-lg font-normal text-gray-500">{plan.period}</span></p>
-    <p className="text-center text-gray-600 mb-6 h-12">{plan.description}</p>
-    <ul className="space-y-4 text-text mb-8">
+    <h3 className="text-2xl font-extrabold text-accent text-center font-headline">{plan.name}</h3>
+    <p className="text-4xl font-bold text-center my-4">{plan.price} <span className="text-lg font-normal text-text-light">{plan.period}</span></p>
+    <p className="text-center text-text-light mb-6 h-12">{plan.description}</p>
+    <ul className="space-y-4 text-text-light mb-8">
       {plan.features.map((feature, index) => (
         <li key={index} className="flex items-start">
-          <FaCheckCircle className="text-primary w-5 h-5 mr-3 mt-1 flex-shrink-0" />
+          <FaCheckCircle className="text-accent w-5 h-5 mr-3 mt-1 flex-shrink-0" />
           <span>{feature}</span>
         </li>
       ))}
     </ul>
-    <Link to="/register" className={`mt-auto w-full text-center font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 ${plan.popular ? 'bg-primary text-white shadow-lg hover:bg-primary-dark' : 'bg-gray-200 text-secondary hover:bg-gray-300'}`}>
+    <Link to="/register" className={`mt-auto w-full text-center font-bold py-3 px-6 rounded-button transition-transform transform hover:scale-105 ${plan.popular ? 'bg-accent text-white shadow-lg hover:bg-accent-dark' : 'bg-surface text-text-light hover:bg-background'}`}>
       {plan.cta}
     </Link>
   </div>
@@ -86,19 +86,19 @@ const PricingCard = ({ plan }) => (
 const Learn = () => {
   return (
     <div className="bg-background font-body">
-      <header className="bg-secondary text-white text-center py-20 px-4">
-        <h1 className="text-5xl font-bold font-headline mb-4">Unlock Your Potential</h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">Join thousands of learners achieving their academic and career goals with our expert-led courses.</p>
-        <Link to="/register" className="bg-primary text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-primary-dark transition-transform transform hover:scale-105 inline-block">
+      <header className="bg-primary text-white text-center py-20 px-4">
+        <h1 className="text-5xl font-extrabold font-headline mb-4">Unlock Your Potential</h1>
+        <p className="text-xl text-white max-w-3xl mx-auto mb-6">Join thousands of learners achieving their academic and career goals with our expert-led courses.</p>
+        <Link to="/register" className="bg-accent text-white font-bold py-4 px-8 rounded-button shadow-lg hover:bg-accent-hover transition-transform transform hover:scale-105 inline-block">
           Start Your 7-Day Free Trial
         </Link>
       </header>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-secondary font-headline">Choose Your Plan</h2>
-            <p className="mt-4 text-lg text-text max-w-2xl mx-auto">Flexible plans for every learner. Start for free and upgrade anytime.</p>
+            <h2 className="text-4xl font-extrabold text-accent font-headline">Choose Your Plan</h2>
+            <p className="mt-4 text-lg text-text-light max-w-2xl mx-auto">Flexible plans for every learner. Start for free and upgrade anytime.</p>
           </div>
           <div className="mt-16 grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {pricingPlans.map(plan => <PricingCard key={plan.name} plan={plan} />)}
@@ -109,15 +109,15 @@ const Learn = () => {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-secondary font-headline">What Our Learners Say</h2>
+            <h2 className="text-4xl font-extrabold text-accent font-headline">What Our Learners Say</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center">
+              <div key={index} className="bg-surface p-8 rounded-card shadow-card flex flex-col items-center text-center">
                 <img src={testimonial.image} alt={testimonial.name} className="w-24 h-24 rounded-full object-cover border-4 border-accent mb-4" />
-                <p className="text-text italic text-lg mb-4">“{testimonial.quote}”</p>
-                <cite className="font-bold text-secondary not-italic text-xl">{testimonial.name}</cite>
-                <p className="text-gray-500">{testimonial.class}</p>
+                <p className="text-text-light italic text-lg mb-4">“{testimonial.quote}”</p>
+                <cite className="font-extrabold text-accent not-italic text-xl">{testimonial.name}</cite>
+                <p className="text-text-light">{testimonial.class}</p>
               </div>
             ))}
           </div>

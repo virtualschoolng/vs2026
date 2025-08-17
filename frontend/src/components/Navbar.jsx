@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.jpg';
 
 const NavLinks = ({ className, linkClassName, onLinkClick }) => {
   const links = [
@@ -14,8 +14,8 @@ const NavLinks = ({ className, linkClassName, onLinkClick }) => {
     { to: "/pricing", text: "Pricing" },
   ];
 
-  const baseLinkClasses = "hover:text-primary transition-colors duration-300";
-  const activeLinkClasses = "text-primary font-semibold";
+  const baseLinkClasses = "hover:text-accent transition-colors duration-300";
+  const activeLinkClasses = "text-accent font-semibold";
 
   return (
     <nav className={className}>
@@ -24,7 +24,7 @@ const NavLinks = ({ className, linkClassName, onLinkClick }) => {
           key={link.to}
           to={link.to}
           onClick={onLinkClick}
-          className={({ isActive }) => `${baseLinkClasses} ${linkClassName} ${isActive ? activeLinkClasses : 'text-text'}`}
+          className={({ isActive }) => `${baseLinkClasses} ${linkClassName} ${isActive ? activeLinkClasses : 'text-text-light'}`}
         >
           {link.text}
         </NavLink>
@@ -63,15 +63,15 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
           <img src={logo} className="h-10" alt="Virtual School of Nigeria Logo" />
-          <span className="self-center text-xl font-bold whitespace-nowrap font-headline text-primary">
+          <span className="self-center text-xl font-bold whitespace-nowrap font-headline text-accent">
             VIRTUAL SCHOOL OF NIGERIA
           </span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
           <NavLinks className="flex items-center space-x-8 font-medium" />
-          <Link to="/login" className="font-medium text-text-light hover:text-primary transition-colors duration-300">Login</Link>
-          <Link to="/register" className="bg-accent text-white font-bold py-2 px-5 rounded-button shadow-md hover:bg-accent-hover transition-all transform hover:scale-105">Get Started</Link>
+          <Link to="/login" className="font-medium text-text-light hover:text-accent transition-colors duration-300">Login</Link>
+          <Link to="/register" className="bg-accent text-white font-bold py-2 px-5 rounded-button shadow-md hover:bg-accent-dark transition-all transform hover:scale-105">Get Started</Link>
         </div>
 
         <div className="md:hidden">
@@ -90,7 +90,7 @@ const Navbar = () => {
             onLinkClick={closeMenu}
           />
           <div className="flex flex-col items-center space-y-6 pt-6 w-full">
-            <Link to="/login" onClick={closeMenu} className="font-medium text-xl text-text-light">Login</Link>
+            <Link to="/login" onClick={closeMenu} className="font-medium text-xl text-text-light hover:text-accent">Login</Link>
             <Link to="/register" onClick={closeMenu} className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-lg text-xl w-full text-center">Get Started</Link>
           </div>
         </div>

@@ -29,27 +29,27 @@ const courseData = {
 
 const getSkillLevelClass = (level) => {
   switch (level.toLowerCase()) {
-    case 'beginner': return 'bg-green-100 text-green-800';
-    case 'intermediate': return 'bg-yellow-100 text-yellow-800';
-    case 'advanced': return 'bg-red-100 text-red-800';
-    default: return 'bg-gray-100 text-gray-800';
+    case 'beginner': return 'bg-success-light text-success-dark';
+    case 'intermediate': return 'bg-warning-light text-warning-dark';
+    case 'advanced': return 'bg-error-light text-error-dark';
+    default: return 'bg-surface text-text-light';
   }
 };
 
 const CourseCard = ({ course }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-transform transform hover:-translate-y-2">
+  <div className="bg-background rounded-card shadow-card overflow-hidden flex flex-col transition-transform transform hover:-translate-y-2 hover:shadow-lg">
     <div className="p-6 flex-grow flex flex-col">
       <div className="flex items-center mb-4">
         <img src={course.icon} alt={`${course.category} icon`} className="w-8 h-8 mr-3" />
-        <span className="text-sm font-semibold text-primary">{course.category}</span>
+        <span className="text-sm font-semibold text-text-light">{course.category}</span>
       </div>
-      <h3 className="text-xl font-bold font-headline mb-2 text-secondary">{course.title}</h3>
-      <p className="text-text mb-4 flex-grow">{course.description}</p>
+      <h3 className="text-xl font-extrabold font-headline mb-2 text-accent">{course.title}</h3>
+      <p className="text-text-light mb-4 flex-grow">{course.description}</p>
       <div className="flex justify-between items-center mt-auto pt-4">
         <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${getSkillLevelClass(course.level)}`}>
           {course.level}
         </span>
-        <Link to="/learn" className="bg-primary text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-primary-hover transition-colors">
+        <Link to="/learn" className="bg-accent text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-accent-dark transition-colors">
           Learn More
         </Link>
       </div>
@@ -60,15 +60,15 @@ const CourseCard = ({ course }) => (
 const AiCourses = () => {
   return (
     <div className="bg-background min-h-screen font-body">
-      <header className="bg-secondary text-white text-center py-20 px-4">
-        <h1 className="text-5xl font-bold font-headline mb-4">AI & ICT Courses</h1>
-        <p className="text-xl text-gray-300 font-body">Explore cutting-edge courses in Artificial Intelligence and ICT.</p>
+      <header className="bg-accent text-white text-center py-20 px-4">
+        <h1 className="text-5xl font-extrabold font-headline mb-4">AI & ICT Courses</h1>
+        <p className="text-xl text-text-light font-body">Explore cutting-edge courses in Artificial Intelligence and ICT.</p>
       </header>
 
       <main className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {Object.entries(courseData).map(([category, data]) => (
           <section key={category} className="mb-16">
-            <h2 className="text-3xl font-bold font-headline text-secondary mb-8">{category}</h2>
+            <h2 className="text-3xl font-extrabold font-headline text-accent mb-8">{category}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {data.courses.map((course, index) => (
                 <CourseCard key={index} course={{ ...course, category, icon: data.icon }} />

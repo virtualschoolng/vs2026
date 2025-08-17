@@ -3,19 +3,19 @@ import { useAuth } from '../context/AuthContext';
 import { FaChalkboardUser, FaUsers, FaStar, FaUserGraduate } from 'react-icons/fa6';
 
 const StatCard = ({ icon, label, value }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+  <div className="bg-surface p-6 rounded-card shadow-card flex items-center space-x-4">
     <div className="bg-primary-light p-3 rounded-full">
       {icon}
     </div>
     <div>
-      <p className="text-gray-500 text-sm font-medium">{label}</p>
+      <p className="text-text text-sm font-medium">{label}</p>
       <p className="text-secondary text-2xl font-bold">{value}</p>
     </div>
   </div>
 );
 
 const CourseCard = ({ title, students }) => (
-  <div className="bg-white p-5 rounded-lg shadow-md">
+  <div className="bg-surface p-5 rounded-card shadow-card">
     <h3 className="font-bold text-secondary text-lg mb-2">{title}</h3>
     <div className="flex items-center text-gray-500">
       <FaUsers className="mr-2" />
@@ -83,8 +83,8 @@ const TutorDashboard = () => {
     <div className="bg-background min-h-screen font-body text-text">
       <div className="max-w-screen-xl mx-auto p-8">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-secondary font-headline">Tutor Dashboard</h1>
-          <p className="text-gray-600 mt-2">Welcome, {user?.full_name}. Manage your courses and students here.</p>
+          <h1 className="text-4xl font-bold text-primary font-headline">Tutor Dashboard</h1>
+          <p className="text-text-light mt-2">Welcome, {user?.full_name}. Manage your courses and students here.</p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -104,7 +104,7 @@ const TutorDashboard = () => {
           </main>
 
           <aside>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-surface p-6 rounded-card shadow-card">
               <h3 className="text-xl font-bold text-secondary mb-4">Recent Student Submissions</h3>
               <ul className="space-y-4">
                 {data.recent_submissions.map(sub => (

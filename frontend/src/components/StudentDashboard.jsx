@@ -19,23 +19,23 @@ const achievements = [
 ];
 
 const StatCard = ({ icon, label, value }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-    <div className="bg-emerald-50 p-3 rounded-full">{icon}</div>
+  <div className="bg-surface p-6 rounded-card shadow-card flex items-center space-x-4 hover:shadow-lg transition-all">
+    <div className="bg-primary-light p-3 rounded-full">{icon}</div>
     <div>
-      <p className="text-gray-500 text-sm font-medium">{label}</p>
-      <p className="text-secondary text-2xl font-bold">{value}</p>
+      <p className="text-text text-sm font-medium">{label}</p>
+      <p className="text-primary text-2xl font-extrabold">{value}</p>
     </div>
   </div>
 );
 
 const CourseCard = ({ title, progress, instructor }) => (
-  <div className="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-    <h3 className="font-bold text-secondary text-lg mb-2">{title}</h3>
-    <p className="text-sm text-gray-500 mb-4">Instructor: {instructor}</p>
+  <div className="bg-surface p-5 rounded-card shadow-card hover:shadow-lg transition-all">
+    <h3 className="font-extrabold text-primary text-lg mb-2">{title}</h3>
+    <p className="text-text-light text-sm mb-4">Instructor: {instructor}</p>
     <div className="w-full bg-gray-200 rounded-full h-2.5 mb-2">
-      <div className="bg-primary h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+      <div className="bg-accent h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
     </div>
-    <p className="text-right text-sm font-medium text-primary">{progress}% Complete</p>
+    <p className="text-right text-sm font-medium text-accent">{progress}% Complete</p>
   </div>
 );
 
@@ -56,12 +56,12 @@ const SubscriptionStatus = ({ user }) => {
   const isTrial = user?.subscription_plan === 'trial';
 
   return (
-    <div className="bg-gradient-to-r from-secondary to-blue-900 text-white p-6 rounded-lg shadow-lg mb-12">
+    <div className="bg-surface text-text p-6 rounded-card shadow-lg mb-12">
       <div className="flex justify-between items-center">
         <div>
           <div className="flex items-center space-x-2 mb-2">
             <FaStar className={`${isTrial ? 'text-yellow-400' : 'text-accent'}`} />
-            <h2 className="text-2xl font-bold font-headline">{planName} Plan</h2>
+            <h2 className="text-2xl font-extrabold font-headline">{planName} Plan</h2>
           </div>
           {daysLeft !== null && daysLeft > 0 && (
             <p className="flex items-center space-x-2 text-gray-300">
@@ -100,8 +100,8 @@ const StudentDashboard = () => {
     <div className="bg-background min-h-screen font-body text-text">
       <div className="max-w-screen-xl mx-auto p-8">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-secondary font-headline">Welcome back, {user?.full_name}!</h1>
-          <p className="text-gray-600 mt-2">Let's continue your learning journey and reach your goals.</p>
+          <h1 className="text-4xl font-bold text-primary font-headline">Welcome back, {user?.full_name}!</h1>
+          <p className="text-text-light mt-2">Let's continue your learning journey and reach your goals.</p>
         </header>
 
         <SubscriptionStatus user={user} />
@@ -114,7 +114,7 @@ const StudentDashboard = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <main className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-secondary mb-6">My Courses</h2>
+            <h2 className="text-2xl font-extrabold text-primary mb-6">My Courses</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {courses.map(course => (
                 <CourseCard key={course.id} {...course} />
@@ -123,8 +123,8 @@ const StudentDashboard = () => {
           </main>
 
           <aside>
-            <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-              <h3 className="text-xl font-bold text-secondary mb-4">Upcoming Deadlines</h3>
+            <div className="bg-surface p-6 rounded-card shadow-card mb-8 hover:shadow-lg transition-all">
+              <h3 className="text-xl font-extrabold text-primary mb-4">Upcoming Deadlines</h3>
               <ul className="space-y-4">
                 {deadlines.map(deadline => (
                   <li key={deadline.id} className="flex justify-between items-center">
@@ -135,8 +135,8 @@ const StudentDashboard = () => {
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-secondary mb-4">Recent Achievements</h3>
+            <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-lg transition-all">
+              <h3 className="text-xl font-extrabold text-primary mb-4">Recent Achievements</h3>
               <ul className="space-y-3">
                 {achievements.map(ach => (
                   <li key={ach.id} className="flex items-center space-x-3">

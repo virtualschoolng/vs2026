@@ -69,27 +69,27 @@ const categories = ['All', ...Object.keys(courseData)];
 
 const getSkillLevelClass = (level) => {
   switch (level.toLowerCase()) {
-    case 'beginner': return 'bg-green-100 text-green-800';
-    case 'intermediate': return 'bg-yellow-100 text-yellow-800';
-    case 'advanced': return 'bg-red-100 text-red-800';
-    default: return 'bg-gray-100 text-gray-800';
+    case 'beginner': return 'bg-success-light text-success-dark';
+    case 'intermediate': return 'bg-warning-light text-warning-dark';
+    case 'advanced': return 'bg-error-light text-error-dark';
+    default: return 'bg-surface text-text-light';
   }
 };
 
 const CourseCard = ({ course }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-transform transform hover:-translate-y-2">
+  <div className="bg-surface rounded-card shadow-card overflow-hidden flex flex-col transition-transform transform hover:-translate-y-2 hover:shadow-lg">
     <div className="p-6 flex-grow flex flex-col">
       <div className="flex items-center mb-4">
         <img src={course.icon} alt={`${course.category} icon`} className="w-8 h-8 mr-3" />
-        <span className="text-sm font-semibold text-primary">{course.category}</span>
+        <span className="text-sm font-semibold text-accent">{course.category}</span>
       </div>
-      <h3 className="text-xl font-bold font-headline mb-2 text-secondary">{course.title}</h3>
-      <p className="text-text mb-4 flex-grow">{course.description}</p>
+      <h3 className="text-xl font-extrabold font-headline mb-2 text-accent">{course.title}</h3>
+      <p className="text-text-light mb-4 flex-grow">{course.description}</p>
       <div className="flex justify-between items-center mt-auto pt-4">
         <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${getSkillLevelClass(course.level)}`}>
           {course.level}
         </span>
-        <Link to="/learn" className="bg-primary text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-primary-hover transition-colors">
+        <Link to="/learn" className="bg-accent text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-accent-dark transition-colors">
           Learn More
         </Link>
       </div>
@@ -113,25 +113,25 @@ const Courses = () => {
 
   return (
     <div className="bg-background min-h-screen font-body">
-      <header className="bg-secondary text-white text-center py-20 px-4">
-        <h1 className="text-5xl font-bold font-headline mb-4">Explore Our Courses</h1>
-        <p className="text-xl text-gray-300 font-body">Find the perfect course to boost your knowledge and skills.</p>
+      <header className="bg-primary text-white text-center py-20 px-4">
+        <h1 className="text-5xl font-extrabold font-headline mb-4">Explore Our Courses</h1>
+        <p className="text-xl text-white font-body">Find the perfect course to boost your knowledge and skills.</p>
       </header>
 
       {/* Search and Filter Bar */}
-      <div className="bg-white shadow-md sticky top-[76px] z-40">
+      <div className="bg-surface shadow-md sticky top-[76px] z-40">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-4">
           <input
             type="text"
             placeholder="Search for courses..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full md:w-1/2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full md:w-1/2 px-4 py-3 border border-border rounded-button shadow-sm focus:outline-none focus:ring-2 focus:ring-accent"
           />
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full md:w-1/2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary bg-white"
+            className="w-full md:w-1/2 px-4 py-3 border border-border rounded-button shadow-sm focus:outline-none focus:ring-2 focus:ring-accent bg-surface"
           >
             {categories.map(category => (
               <option key={category} value={category}>{category}</option>
@@ -149,8 +149,8 @@ const Courses = () => {
           </div>
         ) : (
           <div className="text-center py-16">
-            <h3 className="text-2xl font-semibold text-secondary">No Courses Found</h3>
-            <p className="text-text mt-2">Try adjusting your search or filter settings.</p>
+            <h3 className="text-2xl font-extrabold text-text-light">No Courses Found"
+            <p className="text-text-light mt-2">Try adjusting your search or filter settings.</p>
           </div>
         )}
       </main>

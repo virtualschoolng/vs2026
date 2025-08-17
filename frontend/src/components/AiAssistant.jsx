@@ -67,7 +67,7 @@ const AiAssistant = () => {
       {!isOpen && (
         <button
           onClick={() => handleToggleChat(true)}
-          className="fixed bottom-5 right-5 bg-primary text-white w-16 h-16 rounded-full shadow-2xl z-50 flex items-center justify-center hover:bg-primary-hover transition-transform transform hover:scale-110"
+          className="fixed bottom-5 right-5 bg-accent text-white w-16 h-16 rounded-full shadow-2xl z-50 flex items-center justify-center hover:bg-accent-hover transition-transform transform hover:scale-110"
           aria-label="Open Chat"
         >
           <FaRobot className="text-3xl" />
@@ -76,9 +76,9 @@ const AiAssistant = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-5 right-5 w-80 md:w-96 bg-white rounded-xl shadow-2xl z-50 flex flex-col font-body transform transition-all duration-300 ease-in-out animate-fade-in-up">
+        <div className="fixed bottom-5 right-5 w-80 md:w-96 bg-surface rounded-card shadow-card z-50 flex flex-col font-body transform transition-all duration-300 ease-in-out animate-fade-in-up">
           {/* Header */}
-          <header className="bg-secondary text-white p-4 rounded-t-xl flex justify-between items-center">
+          <header className="bg-primary text-white p-4 rounded-t-card flex justify-between items-center">
             <div className="flex items-center">
               <FaRobot className="mr-3 text-2xl" />
               <h3 className="font-headline text-lg font-bold">Virtual School of Nigeria Assistant</h3>
@@ -92,7 +92,7 @@ const AiAssistant = () => {
           <div className="flex-1 p-4 overflow-y-auto h-80">
             {messages.map((msg, index) => (
               <div key={index} className={`flex mb-4 ${msg.sender === 'bot' ? 'justify-start' : 'justify-end'}`}>
-                <div className={`rounded-lg px-4 py-2 max-w-xs ${msg.sender === 'bot' ? 'bg-gray-100 text-text' : 'bg-primary text-white'}`}>
+                <div className={`rounded-lg px-4 py-2 max-w-xs ${msg.sender === 'bot' ? 'bg-background text-text' : 'bg-primary text-white'}`}>
                   <p className="text-sm whitespace-pre-wrap">{msg.text}</p>
                   {msg.isFallback && (
                     <a href="https://wa.me/2347062314302" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center bg-whatsapp text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
@@ -113,9 +113,9 @@ const AiAssistant = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Ask a question..."
-                className="w-full pl-4 pr-12 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full pl-4 pr-12 py-2 border border-border rounded-button focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-white p-2 rounded-full hover:bg-primary-hover transition-colors">
+              <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 bg-accent text-white p-2 rounded-full hover:bg-accent-hover transition-colors">
                 <FaPaperPlane />
               </button>
             </div>

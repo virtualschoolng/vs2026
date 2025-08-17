@@ -35,14 +35,30 @@ export const defaultHeaders = {
 
 // Helper function to handle API responses
 export const handleResponse = async (response) => {
-  const data = await response.json();
-  
-  if (!response.ok) {
-    const error = new Error(data.message || 'Something went wrong');
-    error.status = response.status;
-    error.data = data;
-    throw error;
+  try {
+    const data = await response.json();
+    
+    if (!response.ok) {
+      const error = new Error(data.message || `HTTP error! status: ${response.status}`);
+      error.status = response.status;
+      error.data = data;
+      throw error;
+    }
+    return data;
+  } catch (e) {
+    if (!response.ok) {
+      const error = new Error(`Request failed with status ${response.status}`);
+      error.status = response.status;
+      error.data = { status: response.status };
+      throw error;
+    }
+    return {};
   }
-  
-  return data;
+};
+
+export const register = (data) => {
+  return axios.post(`${baseURL}/register`, {
+    email: data.email,
+    role: data.role
+  });
 };

@@ -35,13 +35,13 @@ function Login() {
         className="hidden md:block md:w-1/2 bg-cover bg-center"
         style={{ backgroundImage: `url(${childrenStudying})` }}
       >
-        <div className="w-full h-full bg-secondary bg-opacity-50"></div>
+        <div className="w-full h-full bg-accent bg-opacity-20"></div>
       </div>
 
       {/* Form Column */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-8">
-        <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-center text-secondary font-headline mb-6">Welcome Back</h2>
+        <div className="max-w-md w-full bg-surface p-8 rounded-card shadow-card">
+          <h2 className="text-3xl font-extrabold text-center text-accent font-headline mb-6">Welcome Back</h2>
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
               <span className="block sm:inline">{error}</span>
@@ -59,7 +59,7 @@ function Login() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-border rounded-button shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               />
             </div>
             <div>
@@ -73,21 +73,21 @@ function Login() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-4 py-3 border border-border rounded-button shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
               />
             </div>
             <button
               disabled={loading}
               type="submit"
-              className="w-full bg-primary text-white font-bold py-3 px-6 rounded-button shadow-lg hover:bg-primary-hover transition-transform transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="w-full bg-accent text-white font-bold py-3 px-6 rounded-button shadow-lg hover:bg-accent-hover transition-transform transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed"
             >
               {loading ? 'Logging In...' : 'Log In'}
             </button>
           </form>
           <div className="text-center mt-6">
-            <p className="text-text">
+            <p className="text-text-light">
               Need an account?{' '}
-              <Link to="/register" className="font-medium text-primary hover:text-primary-hover">
+              <Link to="/register" className="font-medium text-accent hover:text-accent-dark">
                 Register
               </Link>
             </p>

@@ -10,33 +10,11 @@ export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production';
   
   return {
-    base: isProduction ? './' : '/',
+    base: '/',
     plugins: [react()],
     define: {
       'process.env': env,
       'import.meta.env.MODE': JSON.stringify(mode),
-    },
-    build: {
-      outDir: 'dist',
-      assetsDir: 'assets',
-      sourcemap: true,
-      emptyOutDir: true,
-    },
-    server: {
-      port: 3000,
-      host: true,
-      strictPort: true,
-      hmr: {
-        protocol: 'ws',
-        host: 'localhost',
-      },
-      proxy: {
-        '/api': {
-          target: env.VITE_API_URL || 'http://localhost:5000',
-          changeOrigin: true,
-          secure: false,
-        },
-      },
     },
     build: {
       outDir: 'dist',
@@ -52,6 +30,22 @@ export default defineConfig(({ command, mode }) => {
       },
       commonjsOptions: {
         transformMixedEsModules: true,
+      },
+    },
+    server: {
+      port: 3000,
+      host: true,
+      strictPort: true,
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+      },
+      proxy: {
+        '/api': {
+          target: env.VITE_API_URL || 'http://localhost:5000',
+          changeOrigin: true,
+          secure: false,
+        },
       },
     },
   };

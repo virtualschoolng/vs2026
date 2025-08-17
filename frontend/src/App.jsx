@@ -4,13 +4,15 @@ import { useAuth } from './context/AuthContext';
 
 // Page & Component Imports
 import Home from './components/Home';
+import Contact from './components/Contact';
+import Marquee from './components/Marquee';
 import Pricing from './components/Pricing';
 import Login from './components/Login';
 import Register from './components/Register';
 import DashboardPage from './pages/DashboardPage';
 import Footer from './components/Footer';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
-import logo from './assets/logo.svg';
+import logo from './assets/logo.jpg';
 
 // Simple Nav component that changes based on auth state
 const Nav = () => {
@@ -18,25 +20,26 @@ const Nav = () => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3">
-              <img src={logo} alt="Virtual School of Nigeria Logo" className="h-10 w-auto" />
-              <span className="text-xl font-bold text-secondary font-headline">Virtual School of Nigeria</span>
+              <img src={logo} alt="Virtual School of Nigeria Logo" className="h-12 w-auto" />
+              <span className="text-2xl font-extrabold text-primary font-headline">Virtual School of Nigeria</span>
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
-            <Link to="/" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Pricing</Link>
+          <div className="flex items-center space-x-6">
+            <Link to="/" className="text-text hover:text-primary px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Home</Link>
+            <Link to="/pricing" className="text-text hover:text-primary px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Pricing</Link>
+            <Link to="/contact" className="text-text hover:text-primary px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Contact Us</Link>
             {user ? (
               <>
-                <Link to="/dashboard" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Dashboard</Link>
-                <button onClick={logout} className="bg-red-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-600">Logout</button>
+                <Link to="/dashboard" className="text-text hover:text-primary px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Dashboard</Link>
+                <button onClick={logout} className="bg-accent text-white px-5 py-2 rounded-button text-base font-medium hover:bg-accent-hover transition duration-300 ease-in-out">Logout</button>
               </>
             ) : (
               <>
-                <Link to="/login" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Login</Link>
-                <Link to="/register" className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Sign Up</Link>
+                <Link to="/login" className="text-text hover:text-primary px-3 py-2 rounded-md text-base font-medium transition duration-300 ease-in-out">Login</Link>
+                <Link to="/register" className="bg-primary text-white px-5 py-2 rounded-button text-base font-medium hover:bg-primary-hover transition duration-300 ease-in-out">Sign Up</Link>
               </>
             )}
           </div>
@@ -61,6 +64,33 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
       <Nav />
+    {/* Hero Section */}
+    <section className="relative bg-gradient-to-r from-blue-700 to-green-600 text-white py-20 px-4 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: "url('/src/images/coper.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight animate-fade-in-down">
+          Virtual School of Nigeria – Your Trusted Online Learning Partner
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up">
+          Preparing Nigerian students for WAEC, NECO, BECE, UTME, and Common Entrance.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-zoom-in">
+          <Link
+            to="/register"
+            className="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center"
+          >
+            Enroll Now
+          </Link>
+          <Link
+            to="/contact"
+            className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-blue-700 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
+    </section>
+      <Marquee />
       <main className="flex-grow">
         <Routes>
           {/* Public Routes */}
@@ -68,6 +98,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/* Protected Route */}
           <Route 

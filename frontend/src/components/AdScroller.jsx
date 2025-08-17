@@ -10,14 +10,14 @@ const adTexts = [
 
 const AdScroller = () => {
   return (
-    <div className="w-full overflow-hidden py-4 bg-secondary border-t-2 border-b-2 border-gray-700 shadow-md">
+    <div className="w-full overflow-hidden py-4 bg-primary border-t-2 border-b-2 border-primary-dark shadow-md">
       <div className="flex whitespace-nowrap">
         <div className="flex animate-scroll">
           {adTexts.map((text, index) => (
-            <span key={index} className="mx-8 text-lg font-medium text-white">{text}</span>
+            <span key={index} className="mx-8 text-lg font-extrabold text-white">{text}</span>
           ))}
           {adTexts.map((text, index) => (
-            <span key={`duplicate-${index}`} className="mx-8 text-lg font-medium text-white">{text}</span>
+            <span key={`duplicate-${index}`} className="mx-8 text-lg font-extrabold text-white">{text}</span>
           ))}
         </div>
       </div>

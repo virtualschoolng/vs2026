@@ -42,9 +42,9 @@ const categories = ['All', 'For Learners', 'For Tutors'];
 
 const FaqItem = ({ faq, isOpen, onToggle }) => (
   <div className="border-b border-gray-200">
-    <button onClick={onToggle} className="w-full flex justify-between items-center text-left py-5 px-2 text-lg font-semibold text-secondary hover:text-primary focus:outline-none transition-colors">
+    <button onClick={onToggle} className="w-full flex justify-between items-center text-left py-5 px-2 text-lg font-extrabold text-text hover:text-accent focus:outline-none transition-colors">
       <span className="flex-1">{faq.question}</span>
-      <span className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180 text-primary' : ''}`}>
+      <span className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180 text-accent' : ''}`}>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
       </span>
     </button>
@@ -75,9 +75,9 @@ const FAQ = () => {
 
   return (
     <div className="bg-background min-h-screen font-body">
-      <header className="bg-secondary text-white text-center py-20 px-4">
-        <h1 className="text-5xl font-bold font-headline mb-4">Frequently Asked Questions</h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">Have questions? We have answers. If you can't find what you're looking for, feel free to contact us.</p>
+      <header className="bg-gradient-to-r from-primary to-accent text-white text-center py-20 px-4">
+        <h1 className="text-5xl font-extrabold font-headline mb-4 text-white">Frequently Asked Questions</h1>
+        <p className="text-xl text-text-light max-w-3xl mx-auto">Have questions? We have answers. If you can't find what you're looking for, feel free to contact us.</p>
       </header>
 
       <main className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
@@ -87,7 +87,7 @@ const FAQ = () => {
             placeholder="Search questions..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-5 py-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-5 py-4 border border-border rounded-button shadow-sm focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
 
@@ -96,21 +96,21 @@ const FAQ = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 md:px-6 py-3 text-lg font-medium rounded-t-lg focus:outline-none transition-colors ${selectedCategory === category ? 'border-b-4 border-primary text-primary' : 'text-gray-500 hover:text-secondary'}`}>
+              className={`px-4 md:px-6 py-3 text-lg font-medium rounded-t-lg focus:outline-none transition-colors ${selectedCategory === category ? 'border-b-4 border-accent text-accent' : 'text-text-light hover:text-accent'}`}>
               {category}
             </button>
           ))}
         </div>
 
-        <div className="bg-white rounded-lg shadow-xl p-6">
+        <div className="bg-surface rounded-card shadow-card p-6">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
               <FaqItem key={index} faq={faq} isOpen={activeIndex === index} onToggle={() => toggleFAQ(index)} />
             ))
           ) : (
             <div className="text-center py-10">
-              <h3 className="text-xl font-semibold text-secondary">No questions found.</h3>
-              <p className="text-text mt-2">Try adjusting your search or filters.</p>
+              <h3 className="text-xl font-extrabold text-text-light">No questions found.</h3>
+              <p className="text-text-light mt-2">Try adjusting your search or filters.</p>
             </div>
           )}
         </div>

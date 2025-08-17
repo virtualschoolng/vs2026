@@ -35,27 +35,27 @@ const featuredCourses = [
 
 const getSkillLevelClass = (level) => {
   switch (level.toLowerCase()) {
-    case 'beginner': return 'bg-green-100 text-green-800';
-    case 'intermediate': return 'bg-yellow-100 text-yellow-800';
-    case 'advanced': return 'bg-red-100 text-red-800';
-    default: return 'bg-gray-100 text-gray-800';
+    case 'beginner': return 'bg-success-light text-success-dark';
+    case 'intermediate': return 'bg-warning-light text-warning-dark';
+    case 'advanced': return 'bg-error-light text-error-dark';
+    default: return 'bg-surface text-text-light';
   }
 };
 
 const FeaturedCourseCard = ({ course }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-transform transform hover:-translate-y-2 h-full">
+  <div className="bg-background rounded-card shadow-card overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 hover:shadow-card-hover h-full">
     <div className="p-6 flex-grow flex flex-col">
       <div className="flex items-center mb-4">
-        <img src={course.icon} alt={`${course.category} icon`} className="w-8 h-8 mr-3" />
-        <span className="text-sm font-semibold text-primary">{course.category}</span>
+        <img src={course.icon} alt={`${course.category} icon`} className="w-10 h-10 mr-3" />
+        <span className="text-base font-semibold text-accent">{course.category}</span>
       </div>
-      <h3 className="text-xl font-bold font-headline mb-2 text-secondary">{course.title}</h3>
-      <p className="text-text mb-4 flex-grow">{course.description}</p>
+      <h3 className="text-xl font-bold font-headline mb-2 text-text">{course.title}</h3>
+      <p className="text-text-light mb-4 flex-grow text-base">{course.description}</p>
       <div className="flex justify-between items-center mt-auto pt-4">
-        <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${getSkillLevelClass(course.level)}`}>
+        <span className={`text-sm font-semibold px-3 py-1 rounded-full ${getSkillLevelClass(course.level)}`}>
           {course.level}
         </span>
-        <Link to="/courses" className="bg-primary text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-primary-hover transition-colors">
+        <Link to="/courses" className="bg-accent text-white font-bold py-2 px-4 rounded-button shadow-md hover:bg-accent-hover transition duration-300 ease-in-out">
           Learn More
         </Link>
       </div>
@@ -68,7 +68,7 @@ const FeaturedCourses = () => {
     <section className="py-20 bg-surface">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3 font-headline">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-accent mb-3 font-headline">
             Featured Courses
           </h2>
           <p className="text-lg text-text-light max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const FeaturedCourses = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Link to="/courses" className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-hover transition-all transform hover:scale-105 inline-flex items-center">
+          <Link to="/courses" className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-dark transition duration-300 ease-in-out inline-flex items-center">
             View All Courses
           </Link>
         </div>
