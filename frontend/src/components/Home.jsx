@@ -38,51 +38,66 @@ const Home = () => (
       </div>
     </section>
 
-    {/* Programs Section */}
-    <section className="py-16 px-4">
+    {/* Curriculum Section */}
+    <section id="curriculum" className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Our Educational Programs
+          Our Comprehensive Curriculum
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Western Education */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="bg-primary/10 p-4 rounded-full w-max mx-auto mb-6">
-              <FaGraduationCap className="text-primary text-3xl" />
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Academic Programs */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 text-primary">Academic Programs</h3>
+            <div className="space-y-8">
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Primary & Secondary Education (NERDC Compliant)</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>Nursery 1 - SS3: Full subject coverage including Mathematics, English, Sciences, Arts, and Commercial subjects.</li>
+                  <li>Special focus on core subjects: English Language, Mathematics, Physics, Chemistry, Biology, Economics, Government, Literature.</li>
+                </ul>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Exam Preparation & Remedial Classes</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>WAEC/NECO: Intensive coaching for all subjects, past questions analysis, and mock exams.</li>
+                  <li>UTME/JAMB: Comprehensive preparation for university entrance examinations.</li>
+                  <li>Common Entrance: Specialized classes for primary school leavers.</li>
+                  <li>BECE (JSCE): Junior Secondary School Certificate Examination preparation.</li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-center">Western Education</h3>
-            <ul className="list-disc pl-5 space-y-2 text-gray-600">
-              <li>Primary - Secondary Curriculum</li>
-              <li>STEM Subjects</li>
-              <li>WAEC/JAMB Prep</li>
-            </ul>
           </div>
 
-          {/* Arabic/Islamic Education */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="bg-green-100 p-4 rounded-full w-max mx-auto mb-6">
-              <FaQuran className="text-green-600 text-3xl" />
+          {/* Skills Development Programs */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 text-primary">Skills Development Programs</h3>
+            <div className="space-y-8">
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Digital & ICT Skills</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>Basic Computer Literacy: Microsoft Office Suite (Word, Excel, PowerPoint).</li>
+                  <li>Programming Fundamentals: Python, JavaScript, Web Development (HTML, CSS, React).</li>
+                  <li>Advanced ICT: Cybersecurity, Data Science, Artificial Intelligence (AI) basics.</li>
+                </ul>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Life & Leadership Skills</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>Public Speaking & Communication.</li>
+                  <li>Time Management & Study Techniques.</li>
+                  <li>Leadership & Teamwork.</li>
+                </ul>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">Arabic & Islamic Studies</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                  <li>Qur'an Recitation & Memorization.</li>
+                  <li>Tajweed & Fiqh.</li>
+                  <li>Arabic Language & Islamic History.</li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-center">Arabic & Islamic Studies</h3>
-            <ul className="list-disc pl-5 space-y-2 text-gray-600">
-              <li>Qur'an Recitation</li>
-              <li>Tajweed & Fiqh</li>
-              <li>Arabic Language</li>
-            </ul>
-          </div>
-
-          {/* Computer Education */}
-          <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <div className="bg-blue-100 p-4 rounded-full w-max mx-auto mb-6">
-              <FaLaptopCode className="text-blue-600 text-3xl" />
-            </div>
-            <h3 className="text-xl font-bold mb-4 text-center">Digital Skills Training</h3>
-            <ul className="list-disc pl-5 space-y-2 text-gray-600">
-              <li>Basic Computer Literacy</li>
-              <li>Programming Fundamentals</li>
-              <li>Advanced ICT Skills</li>
-            </ul>
           </div>
         </div>
       </div>
