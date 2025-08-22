@@ -236,16 +236,26 @@ const Home = () => (
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline">Hear From Our Community</h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {/* Testimonial Card 1 */}
           <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
-              <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-              <p className="text-text italic text-lg mb-4 z-10 relative">"My children learn every day now — even better than at regular school!"</p>
-              <p className="font-extrabold text-accent text-right">– Aisha, Abuja</p>
+            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+            <p className="text-text italic text-lg mb-4 z-10 relative">"Virtual School of Nigeria has transformed my children's learning experience. They are more engaged and excelling academically!"</p>
+            <p className="font-extrabold text-accent text-right">– Mrs. Adebayo, Parent</p>
           </div>
+
+          {/* Testimonial Card 2 */}
           <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
-              <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-              <p className="text-text italic text-lg mb-4 z-10 relative">"The AI and ICT courses are a blessing to my teenage son."</p>
-              <p className="font-extrabold text-accent text-right">– Mr. Okoro, Lagos</p>
+            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+            <p className="text-text italic text-lg mb-4 z-10 relative">"The flexibility of online classes combined with top-notch tutors made it possible for me to balance my studies and other commitments."</p>
+            <p className="font-extrabold text-accent text-right">– Emeka, Student</p>
+          </div>
+
+          {/* Testimonial Card 3 */}
+          <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
+            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+            <p className="text-text italic text-lg mb-4 z-10 relative">"I highly recommend VSN for anyone seeking quality education. The curriculum is comprehensive, and the support is exceptional."</p>
+            <p className="font-extrabold text-accent text-right">– Dr. Ngozi, Educator</p>
           </div>
         </div>
       </div>
