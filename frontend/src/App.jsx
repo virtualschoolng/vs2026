@@ -69,23 +69,23 @@ function App() {
       <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: "url('/src/images/coper.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight animate-fade-in-down">
-          Virtual School of Nigeria – Your Trusted Online Learning Partner
+          Virtual School of Nigeria – Empowering Students Nationwide
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up">
-          Preparing Nigerian students for WAEC, NECO, BECE, UTME, and Common Entrance.
+          Preparing Nigerian students for WAEC, NECO, BECE, UTME, and Common Entrance with flexible online classes.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-zoom-in">
           <Link
-            to="/register"
+            to="#"
             className="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center"
           >
-            Enroll Now
+            Book Free Trial
           </Link>
           <Link
-            to="/contact"
+            to="#curriculum"
             className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-blue-700 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center"
           >
-            Contact Us
+            Explore Curriculum
           </Link>
         </div>
       </div>
