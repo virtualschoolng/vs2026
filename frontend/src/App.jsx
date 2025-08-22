@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useAuth } from './context/AuthContext';
 
 // Page & Component Imports
@@ -64,6 +65,50 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   return (
+    <HelmetProvider>
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "Virtual School of Nigeria",
+              "url": "https://www.virtualschool.com.ng",
+              "logo": "https://www.virtualschool.com.ng/logo.jpg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+234-801-234-5678",
+                "contactType": "customer service"
+              },
+              "sameAs": [
+                "https://www.facebook.com/virtualschoolnigeria",
+                "https://twitter.com/virtualschoolng",
+                "https://www.linkedin.com/company/virtualschoolnigeria",
+                "https://www.instagram.com/virtualschoolnigeria"
+              ]
+            }
+          `}
+        </script>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Online Tutoring",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Virtual School of Nigeria"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Nigeria"
+              },
+              "description": "Online tutoring services for WAEC, NECO, BECE, UTME, and Common Entrance exams in Nigeria.",
+              "url": "https://www.virtualschool.com.ng/tutors"
+            }
+          `}
+        </script>
+      </Helmet>
     <div className="flex flex-col min-h-screen bg-background font-body">
       <Nav />
     {/* Hero Section */}
@@ -126,5 +171,6 @@ function App() {
     </div>
   );
 }
+</HelmetProvider>
 
 export default App;
