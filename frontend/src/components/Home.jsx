@@ -123,12 +123,15 @@ const Home = () => {
           From Nursery 1 to SS3 – plus ICT, AI, Leadership, and Project Management courses.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Link
-            to="/register?trial=true"
-            className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-dark transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+          <a
+            href="https://forms.gle/uo2e8iha1F1etHED6"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Join Free Trial Class at Virtual School of Nigeria"
+            className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-green-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
           >
-            Start Free Trial
-          </Link>
+            <span className="text-xl mr-2">📘</span> Book Free Trial Class
+          </a>
           <Link
             to="/pricing"
             className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-hover transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
@@ -189,12 +192,15 @@ const Home = () => {
         <p className="text-xl md:text-2xl mb-8">
           Book a FREE trial class today and discover the Virtual School of Nigeria difference!
         </p>
-        <Link
-          to="/register?trial=true"
+        <a
+          href="https://forms.gle/uo2e8iha1F1etHED6"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Join Free Trial Class at Virtual School of Nigeria"
           className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center text-lg"
         >
-          Book Your FREE Trial Now!
-        </Link>
+          <span className="text-xl mr-2">🚀</span> Start Your Learning Journey Free
+        </a>
       </div>
     </section>
 

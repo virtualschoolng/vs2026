@@ -12,6 +12,7 @@ const NavLinks = ({ className, linkClassName, onLinkClick }) => {
     { to: "/contact", text: "Contact Us" },
     { to: "/login", text: "Login" },
     { to: "/register", text: "Sign Up", isBold: true },
+    { to: "https://forms.gle/uo2e8iha1F1etHED6", text: "Book Free Trial Class", isExternal: true, icon: "📘" },
   ];
 
   const baseLinkClasses = "hover:text-accent transition-colors duration-300";
@@ -97,7 +98,6 @@ const Navbar = () => {
           <div className="flex flex-col items-center space-y-6 pt-6 w-full">
             <Link to="/login" onClick={closeMenu} className="font-medium text-xl text-text-light hover:text-accent">Login</Link>
             <Link to="/register" onClick={closeMenu} className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-lg text-xl w-full text-center">Sign Up</Link>
-          </div>
           </div>
         </div>
       </div>

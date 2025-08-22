@@ -72,6 +72,20 @@ const Footer = () => {
               <li><FooterLink to="/faq">FAQ</FooterLink></li>
             </ul>
           </div>
+
+          {/* Call to Action */}
+          <div className="lg:col-span-1 md:col-span-4">
+            <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Ready to Start?</h3>
+            <p className="text-text-light mb-4">Join our community of learners today!</p>
+            <a
+              href="https://forms.gle/uo2e8iha1F1etHED6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-button shadow-sm text-white bg-accent hover:bg-accent-dark transition-colors duration-300"
+            >
+              Book Free Trial Class 🚀
+            </a>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between">
