@@ -36,11 +36,11 @@ const Home = () => {
     {/* About Section */}
     <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Virtual School of Nigeria</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Virtual School of Nigeria: Your Partner in Online Education</h2>
         <p className="text-lg text-text-light leading-relaxed">
-          Virtual School of Nigeria is an innovative online educational platform dedicated to providing interactive classes,
-          comprehensive exam preparations, and personalized consultations for Nigerian students nationwide.
-          We are committed to empowering students with quality education and preparing them for academic excellence and future success.
+          Virtual School of Nigeria is a leading <strong class="text-primary-dark">online educational platform</strong> dedicated to providing <strong class="text-primary-dark">interactive online classes</strong>,
+          <strong class="text-primary-dark">comprehensive exam preparations</strong> (WAEC, NECO, JAMB, BECE, Common Entrance), and <strong class="text-primary-dark">personalized online tutoring</strong> for <strong class="text-primary-dark">Nigerian students</strong> nationwide.
+          We are committed to empowering students with <strong class="text-primary-dark">quality online education</strong>, fostering <strong class="text-primary-dark">academic excellence</strong>, and preparing them for <strong class="text-primary-dark">future success</strong> in a competitive world.
         </p>
       </div>
     </section>
@@ -49,7 +49,7 @@ const Home = () => {
     <section id="curriculum" className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Our Comprehensive Curriculum
+          Our Comprehensive Online Curriculum for Nigerian Students
         </h2>
         
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
@@ -60,17 +60,17 @@ const Home = () => {
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Primary & Secondary Education (NERDC Compliant)</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>Nursery 1 - SS3: Full subject coverage including Mathematics, English, Sciences, Arts, and Commercial subjects.</li>
-                  <li>Special focus on core subjects: English Language, Mathematics, Physics, Chemistry, Biology, Economics, Government, Literature.</li>
+                  <li><strong class="text-primary-dark">Nursery 1 - SS3</strong>: Full subject coverage including <strong class="text-primary-dark">Mathematics</strong>, <strong class="text-primary-dark">English Language</strong>, <strong class="text-primary-dark">Sciences</strong> (Physics, Chemistry, Biology), <strong class="text-primary-dark">Arts</strong>, and <strong class="text-primary-dark">Commercial subjects</strong>.</li>
+                  <li>Special focus on core subjects: <strong class="text-primary-dark">English Language</strong>, <strong class="text-primary-dark">Mathematics</strong>, <strong class="text-primary-dark">Physics</strong>, <strong class="text-primary-dark">Chemistry</strong>, <strong class="text-primary-dark">Biology</strong>, <strong class="text-primary-dark">Economics</strong>, <strong class="text-primary-dark">Government</strong>, <strong class="text-primary-dark">Literature</strong>.</li>
                 </ul>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Exam Preparation & Remedial Classes</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>WAEC/NECO: Intensive coaching for all subjects, past questions analysis, and mock exams.</li>
-                  <li>UTME/JAMB: Comprehensive preparation for university entrance examinations.</li>
-                  <li>Common Entrance: Specialized classes for primary school leavers.</li>
-                  <li>BECE (JSCE): Junior Secondary School Certificate Examination preparation.</li>
+                  <li><strong class="text-primary-dark">WAEC/NECO</strong>: Intensive coaching for all subjects, past questions analysis, and mock exams.</li>
+                  <li><strong class="text-primary-dark">UTME/JAMB</strong>: Comprehensive preparation for university entrance examinations.</li>
+                  <li><strong class="text-primary-dark">Common Entrance</strong>: Specialized classes for primary school leavers.</li>
+                  <li><strong class="text-primary-dark">BECE (JSCE)</strong>: Junior Secondary School Certificate Examination preparation.</li>
                 </ul>
               </div>
             </div>
@@ -83,25 +83,25 @@ const Home = () => {
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Digital & ICT Skills</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>Basic Computer Literacy: Microsoft Office Suite (Word, Excel, PowerPoint).</li>
-                  <li>Programming Fundamentals: Python, JavaScript, Web Development (HTML, CSS, React).</li>
-                  <li>Advanced ICT: Cybersecurity, Data Science, Artificial Intelligence (AI) basics.</li>
+                  <li><strong class="text-primary-dark">Basic Computer Literacy</strong>: Microsoft Office Suite (Word, Excel, PowerPoint).</li>
+                  <li><strong class="text-primary-dark">Programming Fundamentals</strong>: Python, JavaScript, Web Development (HTML, CSS, React).</li>
+                  <li><strong class="text-primary-dark">Advanced ICT</strong>: Cybersecurity, Data Science, Artificial Intelligence (AI) basics.</li>
                 </ul>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Life & Leadership Skills</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>Public Speaking & Communication.</li>
-                  <li>Time Management & Study Techniques.</li>
-                  <li>Leadership & Teamwork.</li>
+                  <li><strong class="text-primary-dark">Public Speaking & Communication</strong>.</li>
+                  <li><strong class="text-primary-dark">Time Management & Study Techniques</strong>.</li>
+                  <li><strong class="text-primary-dark">Leadership & Teamwork</strong>.</li>
                 </ul>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md">
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Arabic & Islamic Studies</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li>Qur'an Recitation & Memorization.</li>
-                  <li>Tajweed & Fiqh.</li>
-                  <li>Arabic Language & Islamic History.</li>
+                  <li><strong class="text-primary-dark">Qur'an Recitation & Memorization</strong>.</li>
+                  <li><strong class="text-primary-dark">Tajweed & Fiqh</strong>.</li>
+                  <li><strong class="text-primary-dark">Arabic Language & Islamic History</strong>.</li>
                 </ul>
               </div>
             </div>
@@ -155,30 +155,30 @@ const Home = () => {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline mb-3">
-            What You’ll Learn
+            What You’ll Learn at Virtual School of Nigeria
           </h2>
-          <p className="text-lg text-text-light max-w-2xl mx-auto">A complete curriculum designed for academic success and real-world skills.</p>
+          <p className="text-lg text-text-light max-w-2xl mx-auto">Our <strong class="text-accent-dark">complete online curriculum</strong> is designed for <strong class="text-accent-dark">academic success</strong> and <strong class="text-accent-dark">real-world skills development</strong>, preparing students for a brighter future.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-accent text-4xl mb-4"><FaBookOpen /></div>
-            <h3 className="text-xl font-bold text-text font-headline mb-2">Nigerian Curriculum</h3>
-            <p className="text-text-light text-base">Full coverage of all subjects from Nursery 1 to SS3, following the official NERDC curriculum.</p>
+            <h3 className="text-xl font-bold text-text font-headline mb-2">Nigerian Curriculum Mastery</h3>
+            <p className="text-text-light text-base">Gain <strong class="text-accent-dark">full coverage</strong> of all subjects from <strong class="text-accent-dark">Nursery 1 to SS3</strong>, meticulously following the official <strong class="text-accent-dark">NERDC curriculum</strong> for comprehensive learning.</p>
           </div>
           <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-accent text-4xl mb-4"><FaLaptopCode /></div>
             <h3 className="text-xl font-bold text-text font-headline mb-2">Web, AI & Digital Skills</h3>
-            <p className="text-text-light text-base">Master in-demand technologies like Web Design, AI, Cybersecurity, and other critical digital skills.</p>
+            <p className="text-text-light text-base">Master <strong class="text-accent-dark">in-demand technologies</strong> like <strong class="text-accent-dark">Web Design</strong>, <strong class="text-accent-dark">Artificial Intelligence (AI)</strong>, <strong class="text-accent-dark">Cybersecurity</strong>, and other critical <strong class="text-accent-dark">digital skills</strong> essential for the modern world.</p>
           </div>
           <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-accent text-4xl mb-4"><FaBullhorn /></div>
             <h3 className="text-xl font-bold text-text font-headline mb-2">Life & Leadership Skills</h3>
-            <p className="text-text-light text-base">Develop essential soft skills including Public Speaking, Time Management, and effective leadership.</p>
+            <p className="text-text-light text-base">Develop essential <strong class="text-accent-dark">soft skills</strong> including <strong class="text-accent-dark">Public Speaking</strong>, <strong class="text-accent-dark">Time Management</strong>, and effective <strong class="text-accent-dark">leadership</strong> to excel in all aspects of life.</p>
           </div>
           <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
             <div className="text-accent text-4xl mb-4"><FaTasks /></div>
             <h3 className="text-xl font-bold text-text font-headline mb-2">Career & Project Management</h3>
-            <p className="text-text-light text-base">Gain practical knowledge in Project Management and career planning to prepare for the future.</p>
+            <p className="text-text-light text-base">Gain practical knowledge in <strong class="text-accent-dark">Project Management</strong> and <strong class="text-accent-dark">career planning</strong>, equipping you with the tools to navigate your professional journey successfully.</p>
           </div>
         </div>
       </div>
@@ -187,10 +187,10 @@ const Home = () => {
     <section className="py-20 bg-blue-700 text-white text-center">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-          Ready to Experience Quality Online Learning?
+          Ready to Experience <strong class="text-yellow-300">Quality Online Learning</strong> with Expert Tutors?
         </h2>
         <p className="text-xl md:text-2xl mb-8">
-          Book a FREE trial class today and discover the Virtual School of Nigeria difference!
+          Book a <strong class="text-yellow-300">FREE trial class</strong> today and discover the <strong class="text-yellow-300">Virtual School of Nigeria difference</strong> – your path to <strong class="text-yellow-300">academic success</strong>!
         </p>
         <a
           href="https://forms.gle/uo2e8iha1F1etHED6"
