@@ -13,6 +13,7 @@ import Register from './components/Register';
 import DashboardPage from './pages/DashboardPage';
 import Footer from './components/Footer';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
+import BlogPage from './pages/BlogPage';
 import logo from './assets/logo.jpg';
 
 // Simple Nav component that changes based on auth state
@@ -101,6 +102,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<BlogPage />} />
 
           {/* Protected Route */}
           <Route 
