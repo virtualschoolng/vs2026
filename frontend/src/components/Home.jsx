@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import usePageMetadata from '../hooks/usePageMetadata';
 import { FaWhatsapp, FaShieldAlt, FaMobileAlt, FaUserTie, FaBookOpen, FaGraduationCap, FaQuran, FaUserPlus, FaLaptopCode, FaBullhorn, FaTasks, FaQuoteLeft } from 'react-icons/fa';
 import FeaturedCourses from './FeaturedCourses.jsx';
 import Marquee from './Marquee.jsx';
@@ -22,7 +23,13 @@ const TestimonialCard = ({ quote, author, location }) => (
     </div>
 );
 
-const Home = () => (
+const Home = () => {
+  usePageMetadata({
+    title: 'Virtual School of Nigeria | Best Online Tutors for WAEC, NECO, JAMB',
+    description: 'Learn online with expert Nigerian tutors. Affordable online lessons for WAEC, NECO, JAMB, BECE & Common Entrance. Book a free trial class today!'
+  });
+
+  return (
   <div className="min-h-screen bg-gray-50">
     <Marquee />
 

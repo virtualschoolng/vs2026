@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaWhatsapp, FaLock, FaPaintBrush, FaCode } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import usePageMetadata from '../hooks/usePageMetadata';
 
 
 
 const Pricing = () => {
+  usePageMetadata({
+    title: 'Virtual School of Nigeria | Affordable Online Tutoring Plans',
+    description: 'Explore flexible and affordable online tutoring plans for WAEC, NECO, JAMB, BECE, and Common Entrance. Find the perfect plan for your academic success.'
+  });
   const [billingCycle, setBillingCycle] = useState('yearly');
 
 
