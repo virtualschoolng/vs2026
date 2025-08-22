@@ -174,6 +174,23 @@ const Home = () => (
       </div>
     </section>
 
+    <section className="py-20 bg-blue-700 text-white text-center">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          Ready to Experience Quality Online Learning?
+        </h2>
+        <p className="text-xl md:text-2xl mb-8">
+          Book a FREE trial class today and discover the Virtual School of Nigeria difference!
+        </p>
+        <Link
+          to="/register?trial=true"
+          className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center text-lg"
+        >
+          Book Your FREE Trial Now!
+        </Link>
+      </div>
+    </section>
+
     <FeaturedCourses />
 
     {/* Testimonials Section */}
