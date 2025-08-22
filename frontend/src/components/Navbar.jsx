@@ -85,8 +85,8 @@ const Navbar = () => {
       <div className={`md:hidden absolute top-full left-0 w-full bg-surface transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex flex-col items-center p-8 space-y-6">
           <NavLinks
-            className="flex flex-col items-center space-y-6 w-full"
-            linkClassName="text-xl w-full text-center pb-4 border-b border-border"
+            className="flex flex-wrap justify-center w-full"
+            linkClassName="text-lg w-1/3 text-center py-2"
             onLinkClick={closeMenu}
           />
           <div className="flex flex-col items-center space-y-6 pt-6 w-full">
