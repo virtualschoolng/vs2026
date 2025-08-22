@@ -27,7 +27,7 @@ const Footer = () => {
               <span className="text-2xl font-extrabold font-headline text-accent">VIRTUAL SCHOOL OF NIGERIA</span>
             </Link>
             <p className="text-text-light max-w-sm text-base">
-              Redefining education for the Nigerian child and empowering the next generation of leaders, creators, and innovators.
+              Virtual School of Nigeria offers <strong class="text-primary-dark">online tutoring</strong>, <strong class="text-primary-dark">WAEC, NECO, JAMB, BECE, Common Entrance exam preparation</strong>, and <strong class="text-primary-dark">skills development courses</strong> for Nigerian students. We provide <strong class="text-primary-dark">affordable online classes</strong> with <strong class="text-primary-dark">expert Nigerian tutors</strong>, focusing on <strong class="text-primary-dark">academic excellence</strong> and <strong class="text-primary-dark">future success</strong>.
             </p>
           </div>
 
@@ -35,12 +35,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Quick Links</h3>
             <ul className="space-y-3">
-              <li><FooterLink to="/learn">Learn</FooterLink></li>
-              <li><FooterLink to="/teach">Teach</FooterLink></li>
+              <li><FooterLink to="/about">About Us</FooterLink></li>
               <li><FooterLink to="/courses">Courses</FooterLink></li>
-              <li><FooterLink to="/aitech">AI & Tech</FooterLink></li>
-              <li><FooterLink to="/tutors">Tutors</FooterLink></li>
-              <li><FooterLink to="/pricing">Pricing</FooterLink></li>
+              <li><FooterLink to="/tutors">Our Tutors</FooterLink></li>
+              <li><FooterLink to="/pricing">Pricing Plans</FooterLink></li>
+              <li><FooterLink to="/blog">Blog</FooterLink></li>
+              <li><FooterLink to="/contact">Contact Us</FooterLink></li>
             </ul>
           </div>
 
@@ -51,6 +51,11 @@ const Footer = () => {
               <li>Email: info@virtualschool.com.ng</li>
               <li>Phone: +234 801 234 5678</li>
               <li>Address: 123 School Road, Abuja, Nigeria</li>
+              <li>
+                <a href="https://wa.me/2347062314302" target="_blank" rel="noopener noreferrer" className="text-text-light hover:text-accent transition-colors duration-300 flex items-center">
+                  <FaWhatsapp className="mr-2" /> Chat on WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
