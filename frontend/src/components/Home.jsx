@@ -138,6 +138,18 @@ const Home = () => {
           >
             View Subscription Plans
           </Link>
+          <Link
+            to="/tutors"
+            className="bg-blue-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-blue-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+          >
+            Find a Tutor
+          </Link>
+          <Link
+            to="/courses"
+            className="bg-purple-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-purple-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+          >
+            Explore Courses
+          </Link>
           <a
             href="https://wa.me/2347062314302"
             target="_blank"
