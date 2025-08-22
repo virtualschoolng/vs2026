@@ -31,14 +31,26 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Platform Links */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Platform</h3>
+            <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Quick Links</h3>
             <ul className="space-y-3">
               <li><FooterLink to="/learn">Learn</FooterLink></li>
               <li><FooterLink to="/teach">Teach</FooterLink></li>
               <li><FooterLink to="/courses">Courses</FooterLink></li>
               <li><FooterLink to="/aitech">AI & Tech</FooterLink></li>
+              <li><FooterLink to="/tutors">Tutors</FooterLink></li>
+              <li><FooterLink to="/pricing">Pricing</FooterLink></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Contact Info</h3>
+            <ul className="space-y-3 text-text-light">
+              <li>Email: info@virtualschool.com.ng</li>
+              <li>Phone: +234 801 234 5678</li>
+              <li>Address: 123 School Road, Abuja, Nigeria</li>
             </ul>
           </div>
 
@@ -47,7 +59,6 @@ const Footer = () => {
             <h3 className="text-lg font-semibold tracking-wider uppercase mb-4 text-text">Company</h3>
             <ul className="space-y-3">
               <li><FooterLink to="/about">About Us</FooterLink></li>
-              <li><FooterLink to="/contact">Contact</FooterLink></li>
               <li><FooterLink to="/faq">FAQs</FooterLink></li>
             </ul>
           </div>
