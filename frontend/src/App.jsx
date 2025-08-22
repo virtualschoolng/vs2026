@@ -6,6 +6,7 @@ import { useAuth } from './context/AuthContext';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Marquee from './components/Marquee';
+import Tutors from './components/Tutors';
 import Pricing from './components/Pricing';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -91,6 +92,7 @@ function App() {
       </div>
     </section>
       <Marquee />
+      <Tutors />
       <main className="flex-grow">
         <Routes>
           {/* Public Routes */}
