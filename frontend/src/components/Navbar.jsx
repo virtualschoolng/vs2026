@@ -83,9 +83,9 @@ const Navbar = () => {
 
       {/* Mobile Menu Panel */}
       <div className={`md:hidden absolute top-full left-0 w-full bg-surface transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        <div className="flex flex-col items-center p-8 space-y-6">
+        <div className="flex flex-col items-center px-4 py-8">
           <NavLinks
-            className="flex flex-wrap justify-center w-full"
+            className="flex flex-wrap justify-center w-full gap-x-2 gap-y-4
             linkClassName="text-lg w-1/3 text-center py-2"
             onLinkClick={closeMenu}
           />
