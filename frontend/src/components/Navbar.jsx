@@ -5,13 +5,13 @@ import logo from '../assets/logo.jpg';
 
 const NavLinks = ({ className, linkClassName, onLinkClick }) => {
   const links = [
-    { to: "/learn", text: "Learn" },
-    { to: "/teach", text: "Teach" },
-    { to: "/courses", text: "Courses" },
-    { to: "/ai-courses", text: "AI & ICT" },
-    { to: "/faq", text: "FAQs" },
-    { to: "/contact", text: "Contact" },
+    { to: "/", text: "Home" },
+    { to: "/tutors", text: "Tutors" },
+    { to: "/curriculum", text: "Curriculum" },
     { to: "/pricing", text: "Pricing" },
+    { to: "/contact", text: "Contact Us" },
+    { to: "/login", text: "Login" },
+    { to: "/register", text: "Sign Up", isBold: true },
   ];
 
   const baseLinkClasses = "hover:text-accent transition-colors duration-300";
@@ -24,9 +24,14 @@ const NavLinks = ({ className, linkClassName, onLinkClick }) => {
           key={link.to}
           to={link.to}
           onClick={onLinkClick}
-          className={({ isActive }) => `${baseLinkClasses} ${linkClassName} ${isActive ? activeLinkClasses : 'text-text-light'}`}
+          className={({ isActive }) =>
+            `${baseLinkClasses} ${linkClassName} ${isActive ? activeLinkClasses : 'text-text-light'} ${link.isBold ? 'font-bold' : ''}`
+          }
         >
           {link.text}
+          {link.isBold && (
+            <span className="ml-2 bg-accent text-white text-xs px-2 py-1 rounded-full">New</span>
+          )
         </NavLink>
       ))}
     </nav>
@@ -71,7 +76,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <NavLinks className="flex items-center space-x-8 font-medium" />
           <Link to="/login" className="font-medium text-text-light hover:text-accent transition-colors duration-300">Login</Link>
-          <Link to="/register" className="bg-accent text-white font-bold py-2 px-5 rounded-button shadow-md hover:bg-accent-dark transition-all transform hover:scale-105">Get Started</Link>
+          <Link to="/register" className="bg-accent text-white font-bold py-2 px-5 rounded-button shadow-md hover:bg-accent-dark transition-all transform hover:scale-105">Sign Up</Link>
         </div>
 
         <div className="md:hidden">
@@ -85,13 +90,14 @@ const Navbar = () => {
       <div className={`md:hidden absolute top-full left-0 w-full bg-surface transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex flex-col items-center px-4 py-8">
           <NavLinks
-            className="flex flex-wrap justify-center w-full gap-x-2 gap-y-4
-            linkClassName="text-lg w-1/3 text-center py-2"
+            className="flex flex-col items-center space-y-6 w-full"
+            linkClassName="text-xl w-full text-center pb-4 border-b border-border"
             onLinkClick={closeMenu}
           />
           <div className="flex flex-col items-center space-y-6 pt-6 w-full">
             <Link to="/login" onClick={closeMenu} className="font-medium text-xl text-text-light hover:text-accent">Login</Link>
-            <Link to="/register" onClick={closeMenu} className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-lg text-xl w-full text-center">Get Started</Link>
+            <Link to="/register" onClick={closeMenu} className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-lg text-xl w-full text-center">Sign Up</Link>
+          </div>
           </div>
         </div>
       </div>
