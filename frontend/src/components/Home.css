@@ -1,11 +1,4 @@
 /* General Body Styles */
-body {
-  font-family: 'Poppins', sans-serif; /* A clean, modern font */
-  background-color: var(--color-background);
-  color: #333;
-  line-height: 1.6;
-}
-
 /* Hero Section Styles */
 .hero-section {
   background: var(--color-primary);
