@@ -106,11 +106,11 @@ const Home = () => (
 
     <section className="bg-background text-center py-24 md:py-32 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-accent font-headline mb-4 leading-tight">
-          Welcome to Virtual School of Nigeria
+        <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight font-headline">
+          Virtual School of Nigeria – Best Online Tutors & Classes for WAEC, NECO, JAMB & More
         </h1>
-        <p className="text-xl md:text-2xl text-text font-semibold mb-6">
-          Nigeria’s #1 online platform for learning, teaching, and future skills.
+        <p className="mt-4 text-xl text-white max-w-2xl">
+          Affordable online lessons, live tutorials, and expert tutors across Nigeria. Prepare for WAEC, NECO, UTME, BECE, and Common Entrance with trusted guidance.
         </p>
         <p className="text-lg text-text-light max-w-3xl mx-auto mb-10">
           From Nursery 1 to SS3 – plus ICT, AI, Leadership, and Project Management courses.
