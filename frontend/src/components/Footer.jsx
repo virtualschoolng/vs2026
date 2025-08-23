@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logo from '../assets/logo.jpg';
 
 const Footer = () => {
@@ -27,7 +27,7 @@ const Footer = () => {
               <span className="text-2xl font-extrabold font-headline text-accent">VIRTUAL SCHOOL OF NIGERIA</span>
             </Link>
             <p className="text-text-light max-w-sm text-base">
-              Virtual School of Nigeria offers <strong class="text-primary-dark">online tutoring</strong>, <strong class="text-primary-dark">WAEC, NECO, JAMB, BECE, Common Entrance exam preparation</strong>, and <strong class="text-primary-dark">skills development courses</strong> for Nigerian students. We provide <strong class="text-primary-dark">affordable online classes</strong> with <strong class="text-primary-dark">expert Nigerian tutors</strong>, focusing on <strong class="text-primary-dark">academic excellence</strong> and <strong class="text-primary-dark">future success</strong>.
+              Virtual School of Nigeria offers <strong className="text-primary-dark">online tutoring</strong>, <strong className="text-primary-dark">WAEC, NECO, JAMB, BECE, Common Entrance exam preparation</strong>, and <strong className="text-primary-dark">skills development courses</strong> for Nigerian students. We provide <strong className="text-primary-dark">affordable online classes</strong> with <strong className="text-primary-dark">expert Nigerian tutors</strong>, focusing on <strong className="text-primary-dark">academic excellence</strong> and <strong className="text-primary-dark">future success</strong>.
             </p>
           </div>
 

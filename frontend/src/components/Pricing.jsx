@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheckCircle, FaWhatsapp, FaLock, FaPaintBrush, FaCode } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import usePageMetadata from '../hooks/usePageMetadata';
 
 

@@ -16,11 +16,11 @@ const LearningFeature = ({ icon, title, description }) => (
 
 // Reusable component for testimonials
 const TestimonialCard = ({ quote, author, location }) => (
-    <div className="bg-surface p-8 rounded-card shadow-card relative">
-        <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-        <p className="text-text italic text-lg mb-4 z-10 relative">"{quote}"</p>
-        <p className="font-extrabold text-primary text-right">– {author}, {location}</p>
-    </div>
+  <div className="bg-surface p-8 rounded-card shadow-card relative">
+    <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+    <p className="text-text italic text-lg mb-4 z-10 relative">"{quote}"</p>
+    <p className="font-extrabold text-primary text-right">– {author}, {location}</p>
+  </div>
 );
 
 const Home = () => {
@@ -30,285 +30,197 @@ const Home = () => {
   });
 
   return (
-  <div className="min-h-screen bg-gray-50">
-    <Marquee />
+    <div className="min-h-screen bg-gray-50">
+      <Marquee />
 
-    {/* About Section */}
-    <section className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Virtual School of Nigeria: Your Partner in Online Education</h2>
-        <p className="text-lg text-text-light leading-relaxed">
-          Virtual School of Nigeria is a leading <strong class="text-primary-dark">online educational platform</strong> dedicated to providing <strong class="text-primary-dark">interactive online classes</strong>,
-          <strong class="text-primary-dark">comprehensive exam preparations</strong> (WAEC, NECO, JAMB, BECE, Common Entrance), and <strong class="text-primary-dark">personalized online tutoring</strong> for <strong class="text-primary-dark">Nigerian students</strong> nationwide.
-          We are committed to empowering students with <strong class="text-primary-dark">quality online education</strong>, fostering <strong class="text-primary-dark">academic excellence</strong>, and preparing them for <strong class="text-primary-dark">future success</strong> in a competitive world.
-        </p>
-      </div>
-    </section>
+      {/* About Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">About Virtual School of Nigeria: Your Partner in Online Education</h2>
+          <p className="text-lg text-text-light leading-relaxed">
+            Virtual School of Nigeria is a leading <strong className="text-primary-dark">online educational platform</strong> dedicated to providing <strong className="text-primary-dark">interactive online classes</strong>,
+            <strong className="text-primary-dark">comprehensive exam preparations</strong> (WAEC, NECO, JAMB, BECE, Common Entrance), and <strong className="text-primary-dark">personalized online tutoring</strong> for <strong className="text-primary-dark">Nigerian students</strong> nationwide.
+            We are committed to empowering students with <strong className="text-primary-dark">quality online education</strong>, fostering <strong className="text-primary-dark">academic excellence</strong>, and preparing them for <strong className="text-primary-dark">future success</strong> in a competitive world.
+          </p>
+        </div>
+      </section>
 
-    {/* Curriculum Section */}
-    <section id="curriculum" className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Our Comprehensive Online Curriculum for Nigerian Students
-        </h2>
-        
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Academic Programs */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-primary">Academic Programs</h3>
-            <div className="space-y-8">
-              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Primary & Secondary Education (NERDC Compliant)</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li><strong class="text-primary-dark">Nursery 1 - SS3</strong>: Full subject coverage including <strong class="text-primary-dark">Mathematics</strong>, <strong class="text-primary-dark">English Language</strong>, <strong class="text-primary-dark">Sciences</strong> (Physics, Chemistry, Biology), <strong class="text-primary-dark">Arts</strong>, and <strong class="text-primary-dark">Commercial subjects</strong>.</li>
-                  <li>Special focus on core subjects: <strong class="text-primary-dark">English Language</strong>, <strong class="text-primary-dark">Mathematics</strong>, <strong class="text-primary-dark">Physics</strong>, <strong class="text-primary-dark">Chemistry</strong>, <strong class="text-primary-dark">Biology</strong>, <strong class="text-primary-dark">Economics</strong>, <strong class="text-primary-dark">Government</strong>, <strong class="text-primary-dark">Literature</strong>.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Exam Preparation & Remedial Classes</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li><strong class="text-primary-dark">WAEC/NECO</strong>: Intensive coaching for all subjects, past questions analysis, and mock exams.</li>
-                  <li><strong class="text-primary-dark">UTME/JAMB</strong>: Comprehensive preparation for university entrance examinations.</li>
-                  <li><strong class="text-primary-dark">Common Entrance</strong>: Specialized classes for primary school leavers.</li>
-                  <li><strong class="text-primary-dark">BECE (JSCE)</strong>: Junior Secondary School Certificate Examination preparation.</li>
-                </ul>
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="bg-background text-center py-24 md:py-32 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight font-headline">
+            Virtual School of Nigeria – Best Online Tutors & Classes for WAEC, NECO, JAMB & More
+          </h1>
+          <p className="mt-4 text-xl text-white max-w-2xl mx-auto">
+            Affordable online lessons, live tutorials, and expert tutors across Nigeria. Prepare for WAEC, NECO, UTME, BECE, and Common Entrance with trusted guidance.
+          </p>
+          <p className="text-lg text-text-light max-w-3xl mx-auto mb-10">
+            From Nursery 1 to SS3 – plus ICT, AI, Leadership, and Project Management courses.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a
+              href="https://forms.gle/uo2e8iha1F1etHED6"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Join Free Trial Class at Virtual School of Nigeria"
+              className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-green-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            >
+              <span className="text-xl mr-2">📘</span> Book Free Trial Class
+            </a>
+            <Link
+              to="/pricing"
+              className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-hover transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            >
+              View Subscription Plans
+            </Link>
+            <Link
+              to="/tutors"
+              className="bg-blue-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-blue-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            >
+              Find a Tutor
+            </Link>
+            <Link
+              to="/courses"
+              className="bg-purple-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-purple-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            >
+              Explore Courses
+            </Link>
+            <a
+              href="https://wa.me/2347062314302"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-whatsapp text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-whatsapp-dark transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            >
+              <FaWhatsapp className="mr-2" /> Chat with Us
+            </a>
           </div>
+        </div>
+      </section>
 
-          {/* Skills Development Programs */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6 text-primary">Skills Development Programs</h3>
-            <div className="space-y-8">
-              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Digital & ICT Skills</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li><strong class="text-primary-dark">Basic Computer Literacy</strong>: Microsoft Office Suite (Word, Excel, PowerPoint).</li>
-                  <li><strong class="text-primary-dark">Programming Fundamentals</strong>: Python, JavaScript, Web Development (HTML, CSS, React).</li>
-                  <li><strong class="text-primary-dark">Advanced ICT</strong>: Cybersecurity, Data Science, Artificial Intelligence (AI) basics.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Life & Leadership Skills</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li><strong class="text-primary-dark">Public Speaking & Communication</strong>.</li>
-                  <li><strong class="text-primary-dark">Time Management & Study Techniques</strong>.</li>
-                  <li><strong class="text-primary-dark">Leadership & Teamwork</strong>.</li>
-                </ul>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Arabic & Islamic Studies</h4>
-                <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                  <li><strong class="text-primary-dark">Qur'an Recitation & Memorization</strong>.</li>
-                  <li><strong class="text-primary-dark">Tajweed & Fiqh</strong>.</li>
-                  <li><strong class="text-primary-dark">Arabic Language & Islamic History</strong>.</li>
-                </ul>
-              </div>
+      {/* What You'll Learn Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-screen-xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline mb-3">
+              What You'll Learn at Virtual School of Nigeria
+            </h2>
+            <p className="text-lg text-text-light max-w-2xl mx-auto">Our <strong className="text-accent-dark">complete online curriculum</strong> is designed for <strong className="text-accent-dark">academic success</strong> and <strong className="text-accent-dark">real-world skills development</strong>, preparing students for a brighter future.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-accent text-4xl mb-4"><FaBookOpen /></div>
+              <h3 className="text-xl font-bold text-text font-headline mb-2">Nigerian Curriculum Mastery</h3>
+              <p className="text-text-light text-base">Gain <strong className="text-accent-dark">full coverage</strong> of all subjects from <strong className="text-accent-dark">Nursery 1 to SS3</strong>, meticulously following the official <strong className="text-accent-dark">NERDC curriculum</strong> for comprehensive learning.</p>
+            </div>
+            <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-accent text-4xl mb-4"><FaLaptopCode /></div>
+              <h3 className="text-xl font-bold text-text font-headline mb-2">Web, AI & Digital Skills</h3>
+              <p className="text-text-light text-base">Master <strong className="text-accent-dark">in-demand technologies</strong> like <strong className="text-accent-dark">Web Design</strong>, <strong className="text-accent-dark">Artificial Intelligence (AI)</strong>, <strong className="text-accent-dark">Cybersecurity</strong>, and other critical <strong className="text-accent-dark">digital skills</strong> essential for the modern world.</p>
+            </div>
+            <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-accent text-4xl mb-4"><FaBullhorn /></div>
+              <h3 className="text-xl font-bold text-text font-headline mb-2">Life & Leadership Skills</h3>
+              <p className="text-text-light text-base">Develop essential <strong className="text-accent-dark">soft skills</strong> including <strong className="text-accent-dark">Public Speaking</strong>, <strong className="text-accent-dark">Time Management</strong>, and effective <strong className="text-accent-dark">leadership</strong> to excel in all aspects of life.</p>
+            </div>
+            <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+              <div className="text-accent text-4xl mb-4"><FaTasks /></div>
+              <h3 className="text-xl font-bold text-text font-headline mb-2">Career & Project Management</h3>
+              <p className="text-text-light text-base">Gain practical knowledge in <strong className="text-accent-dark">Project Management</strong> and <strong className="text-accent-dark">career planning</strong>, equipping you with the tools to navigate your professional journey successfully.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-    <section className="bg-background text-center py-24 md:py-32 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight font-headline">
-          Virtual School of Nigeria – Best Online Tutors & Classes for WAEC, NECO, JAMB & More
-        </h1>
-        <p className="mt-4 text-xl text-white max-w-2xl">
-          Affordable online lessons, live tutorials, and expert tutors across Nigeria. Prepare for WAEC, NECO, UTME, BECE, and Common Entrance with trusted guidance.
-        </p>
-        <p className="text-lg text-text-light max-w-3xl mx-auto mb-10">
-          From Nursery 1 to SS3 – plus ICT, AI, Leadership, and Project Management courses.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <section className="py-20 bg-blue-700 text-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Ready to Experience <strong className="text-yellow-300">Quality Online Learning</strong> with Expert Tutors?
+          </h2>
+          <p className="text-xl md:text-2xl mb-8">
+            Book a <strong className="text-yellow-300">FREE trial class</strong> today and discover the <strong className="text-yellow-300">Virtual School of Nigeria difference</strong> – your path to <strong className="text-yellow-300">academic success</strong>!
+          </p>
           <a
             href="https://forms.gle/uo2e8iha1F1etHED6"
             target="_blank"
             rel="noopener noreferrer"
             title="Join Free Trial Class at Virtual School of Nigeria"
-            className="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-green-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
+            className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center text-lg"
           >
-            <span className="text-xl mr-2">📘</span> Book Free Trial Class
-          </a>
-          <Link
-            to="/pricing"
-            className="bg-accent text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-accent-hover transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
-          >
-            View Subscription Plans
-          </Link>
-          <Link
-            to="/tutors"
-            className="bg-blue-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-blue-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
-          >
-            Find a Tutor
-          </Link>
-          <Link
-            to="/courses"
-            className="bg-purple-500 text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-purple-600 transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
-          >
-            Explore Courses
-          </Link>
-          <a
-            href="https://wa.me/2347062314302"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-whatsapp text-white font-bold py-3 px-8 rounded-button shadow-md hover:bg-whatsapp-dark transition duration-300 ease-in-out inline-flex items-center w-full sm:w-auto justify-center"
-          >
-            <FaWhatsapp className="mr-2" /> Chat with Us
+            <span className="text-xl mr-2">🚀</span> Start Your Learning Journey Free
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* What You'll Learn Section */}
-    <section className="py-20 bg-background">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline mb-3">
-            What You’ll Learn at Virtual School of Nigeria
+      <FeaturedCourses />
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
+            Why Choose Virtual School of Nigeria?
           </h2>
-          <p className="text-lg text-text-light max-w-2xl mx-auto">Our <strong class="text-accent-dark">complete online curriculum</strong> is designed for <strong class="text-accent-dark">academic success</strong> and <strong class="text-accent-dark">real-world skills development</strong>, preparing students for a brighter future.</p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-accent text-4xl mb-4"><FaBookOpen /></div>
-            <h3 className="text-xl font-bold text-text font-headline mb-2">Nigerian Curriculum Mastery</h3>
-            <p className="text-text-light text-base">Gain <strong class="text-accent-dark">full coverage</strong> of all subjects from <strong class="text-accent-dark">Nursery 1 to SS3</strong>, meticulously following the official <strong class="text-accent-dark">NERDC curriculum</strong> for comprehensive learning.</p>
-          </div>
-          <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-accent text-4xl mb-4"><FaLaptopCode /></div>
-            <h3 className="text-xl font-bold text-text font-headline mb-2">Web, AI & Digital Skills</h3>
-            <p className="text-text-light text-base">Master <strong class="text-accent-dark">in-demand technologies</strong> like <strong class="text-accent-dark">Web Design</strong>, <strong class="text-accent-dark">Artificial Intelligence (AI)</strong>, <strong class="text-accent-dark">Cybersecurity</strong>, and other critical <strong class="text-accent-dark">digital skills</strong> essential for the modern world.</p>
-          </div>
-          <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-accent text-4xl mb-4"><FaBullhorn /></div>
-            <h3 className="text-xl font-bold text-text font-headline mb-2">Life & Leadership Skills</h3>
-            <p className="text-text-light text-base">Develop essential <strong class="text-accent-dark">soft skills</strong> including <strong class="text-accent-dark">Public Speaking</strong>, <strong class="text-accent-dark">Time Management</strong>, and effective <strong class="text-accent-dark">leadership</strong> to excel in all aspects of life.</p>
-          </div>
-          <div className="bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <div className="text-accent text-4xl mb-4"><FaTasks /></div>
-            <h3 className="text-xl font-bold text-text font-headline mb-2">Career & Project Management</h3>
-            <p className="text-text-light text-base">Gain practical knowledge in <strong class="text-accent-dark">Project Management</strong> and <strong class="text-accent-dark">career planning</strong>, equipping you with the tools to navigate your professional journey successfully.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="py-20 bg-blue-700 text-white text-center">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-          Ready to Experience <strong class="text-yellow-300">Quality Online Learning</strong> with Expert Tutors?
-        </h2>
-        <p className="text-xl md:text-2xl mb-8">
-          Book a <strong class="text-yellow-300">FREE trial class</strong> today and discover the <strong class="text-yellow-300">Virtual School of Nigeria difference</strong> – your path to <strong class="text-yellow-300">academic success</strong>!
-        </p>
-        <a
-          href="https://forms.gle/uo2e8iha1F1etHED6"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Join Free Trial Class at Virtual School of Nigeria"
-          className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 inline-flex items-center justify-center text-lg"
-        >
-          <span className="text-xl mr-2">🚀</span> Start Your Learning Journey Free
-        </a>
-      </div>
-    </section>
-
-    <FeaturedCourses />
-
-    {/* Testimonials Section */}
-    {/* Why Choose Us Section */}
-    <section className="py-20 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
-          Why Choose Virtual School of Nigeria?
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <FaShieldAlt className="text-blue-600 text-4xl mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Accredited & Certified Tutors</h3>
-            <p className="text-gray-600">Learn from highly qualified and experienced educators.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <FaMobileAlt className="text-green-600 text-4xl mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Online Learning</h3>
-            <p className="text-gray-600">Study anytime, anywhere, at your own pace with our accessible platform.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <FaBookOpen className="text-purple-600 text-4xl mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Comprehensive Curriculum</h3>
-            <p className="text-gray-600">Access a wide range of subjects and skills tailored to Nigerian students.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <FaUserPlus className="text-red-600 text-4xl mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Personalized Support</h3>
-            <p className="text-gray-600">Benefit from one-on-one attention and dedicated academic guidance.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-            <FaGraduationCap className="text-yellow-600 text-4xl mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Success Record</h3>
-            <p className="text-gray-600">Join a community of successful students achieving their academic goals.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <FaShieldAlt className="text-blue-600 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Accredited & Certified Tutors</h3>
+              <p className="text-gray-600">Learn from highly qualified and experienced educators.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <FaMobileAlt className="text-green-600 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Online Learning</h3>
+              <p className="text-gray-600">Study anytime, anywhere, at your own pace with our accessible platform.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <FaBookOpen className="text-purple-600 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Comprehensive Curriculum</h3>
+              <p className="text-gray-600">Access a wide range of subjects and skills tailored to Nigerian students.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <FaUserPlus className="text-red-600 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Personalized Support</h3>
+              <p className="text-gray-600">Benefit from one-on-one attention and dedicated academic guidance.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <FaGraduationCap className="text-yellow-600 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Success Record</h3>
+              <p className="text-gray-600">Join a community of successful students achieving their academic goals.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* Testimonials Section */}
-    <section className="bg-background py-20">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline">Hear From Our Community</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Testimonial Card 1 */}
-          <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
-            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-            <p className="text-text italic text-lg mb-4 z-10 relative">"Virtual School of Nigeria has transformed my children's learning experience. They are more engaged and excelling academically!"</p>
-            <p className="font-extrabold text-accent text-right">– Mrs. Adebayo, Parent</p>
+      {/* Testimonials Section */}
+      <section className="bg-background py-20">
+        <div className="max-w-screen-xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-accent font-headline">Hear From Our Community</h2>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* Testimonial Card 1 */}
+            <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
+              <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+              <p className="text-text italic text-lg mb-4 z-10 relative">"Virtual School of Nigeria has transformed my children's learning experience. They are more engaged and excelling academically!"</p>
+              <p className="font-extrabold text-accent text-right">– Mrs. Adebayo, Parent</p>
+            </div>
 
-          {/* Testimonial Card 2 */}
-          <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
-            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-            <p className="text-text italic text-lg mb-4 z-10 relative">"The flexibility of online classes combined with top-notch tutors made it possible for me to balance my studies and other commitments."</p>
-            <p className="font-extrabold text-accent text-right">– Emeka, Student</p>
-          </div>
+            {/* Testimonial Card 2 */}
+            <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
+              <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+              <p className="text-text italic text-lg mb-4 z-10 relative">"The flexibility of online classes combined with top-notch tutors made it possible for me to balance my studies and other commitments."</p>
+              <p className="font-extrabold text-accent text-right">– Emeka, Student</p>
+            </div>
 
-          {/* Testimonial Card 3 */}
-          <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
-            <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
-            <p className="text-text italic text-lg mb-4 z-10 relative">"I highly recommend VSN for anyone seeking quality education. The curriculum is comprehensive, and the support is exceptional."</p>
-            <p className="font-extrabold text-accent text-right">– Dr. Ngozi, Educator</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Trust Section */}
-    <section className="py-20 bg-surface">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <FaUserTie className="text-accent text-5xl mb-4" />
-            <h3 className="text-xl font-bold text-text mb-2">Certified Nigerian Educators</h3>
-            <p className="text-text-light">Learn from the best tutors, vetted for excellence and experience.</p>
-          </div>
-          <div className="flex flex-col items-center bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <FaMobileAlt className="text-accent text-5xl mb-4" />
-            <h3 className="text-xl font-bold text-text mb-2">Safe, Mobile-Friendly Learning</h3>
-            <p className="text-text-light">Access courses anytime, anywhere, on any device in a secure environment.</p>
-          </div>
-          <div className="flex flex-col items-center bg-surface p-6 rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
-            <FaShieldAlt className="text-accent text-5xl mb-4" />
-            <h3 className="text-xl font-bold text-text mb-2">Backed by Real Skills</h3>
-            <p className="text-text-light">Our curriculum is designed to provide practical, applicable knowledge for the future.</p>
+            {/* Testimonial Card 3 */}
+            <div className="bg-surface p-8 rounded-card shadow-card relative hover:shadow-card-hover transition-shadow duration-300">
+              <FaQuoteLeft className="text-gray-200 text-6xl absolute top-4 left-4 -z-10" />
+              <p className="text-text italic text-lg mb-4 z-10 relative">"I highly recommend VSN for anyone seeking quality education. The curriculum is comprehensive, and the support is exceptional."</p>
+              <p className="font-extrabold text-accent text-right">– Dr. Ngozi, Educator</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 
 export default Home;
